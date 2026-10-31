@@ -1,1 +1,54 @@
+#include <stdio.h>
 
+char ch;
+int a,b;
+int sum(int a, int b);
+int diff(int a, int b);
+int prod(int a, int b);
+float div(int a, int b);
+
+int sum(int a,int b){
+    return a+b;
+}
+
+int diff(int a, int b){
+    return a-b;
+}
+
+int prod(int a, int b){
+    return a*b;
+}
+
+float div(int a, int b){
+    return (float)a/b;
+}
+
+int main() {
+    printf("Enter your choice: \n'+' for sum,\n'-' for difference,\n'*' for product,\n'/' for divisor\n");
+    scanf("%c",&ch);
+
+    printf("Enter the first number: ");
+    scanf("%d",&a);
+
+    printf("Enter the second number: ");
+    scanf("%d",&b);
+
+    if(ch=='+'){
+        printf("The sum is: %d\n", sum(a,b));
+    }
+    else if (ch=='-'){
+        printf("The difference is: %d\n", diff(a,b));
+    }
+    else if(ch=='*'){
+        printf("The product is: %d\n", prod(a,b));
+    }
+    else if(ch=='/'){
+        if(b!=0){
+            printf("The divisor is: %.2f\n", div(a,b));
+        }
+        else{
+            printf("Can't divide by zero");
+        }
+    }
+    return 0;
+}
