@@ -1,0 +1,21 @@
+#include <stdio.h>
+int a=0;
+int b=1;
+int sum,n;
+void fibb(int n);
+void fibb(int n){
+    for(int i=1;i<=n;i++){
+        sum=a+b;
+        a=b;
+        b=sum;
+        printf("%d ",sum);
+    }
+}
+int main(){
+    printf("Enter a number: ");
+    scanf("%d",&n);
+
+    printf("The series is: \n");
+    fibb(n);
+    return 0;
+}
