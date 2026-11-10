@@ -1,0 +1,23 @@
+#include <stdio.h>
+int a,b;
+int *p,*q;
+void swap(int *p, int *q);
+
+void swap(int *p, int *q){
+    int temp;
+    temp=*p;
+    *p=*q;
+    *q=temp;
+    printf("The value of a: %d\n",*p);
+    printf("The value of b: %d",*q);
+}
+int main(){
+    printf("Enter the first number: ");
+    scanf("%d",&a);
+    printf("Enter the second number: ");
+    scanf("%d",&b);
+    p=&a;
+    q=&b;
+    swap(p,q);
+
+}
